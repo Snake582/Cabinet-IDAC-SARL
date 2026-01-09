@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import { useForm, ValidationError } from '@formspree/react'
 import { useEffect } from 'react'
 import { Facebook, Instagram, Twitter } from 'lucide-react'
+import Newsletter from './Components/Newsletter'
 
 const Datapartenaires = [
   {
@@ -359,6 +360,20 @@ export default function Home() {
                       {state.submitting ? 'Envoi…' : 'Envoyer le message'}
                     </button>
                   </form>
+        </div>
+      </section>
+
+                  {/*================== Newsletter ===============*/}
+      <section className="bg-gray-50 py-12">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-blue-900 mb-4">
+            Abonnez-vous à notre newsletter
+          </h2>
+          <p className="text-gray-600 mb-8">
+            Recevez nos nouveaux biens et offres exclusives directement dans votre boîte mail.
+          </p>
+          {/* Composant Newsletter */}
+          <Newsletter />
         </div>
       </section>
 
