@@ -49,7 +49,7 @@ const bienData = [
       '/images/photo chez Mme Niang aminata mbodj/IMG-20251105-WA0010.jpg',
       '/images/photo chez Mme Niang aminata mbodj/IMG-20251105-WA0004.jpg',
     ],
-    description: 'Villa avec piscine et jardin',
+    description: 'Appartement situé à Ouest Foire. 1e étage, 4 chambres, salon, cuisine, toilette.',
   },
   {
     id: '3',

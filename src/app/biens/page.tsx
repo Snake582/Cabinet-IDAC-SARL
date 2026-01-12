@@ -17,12 +17,12 @@ const biens = [
   },
   {
     id: 2,
-    title: 'Appartement à $',
-    description: '$',
-    price: '2 ',
+    title: 'Appartement à Ouest Foire',
+    description: 'Appartement situé à Ouest Foire. 1e étage, 4 chambres, salon, cuisine, toilette.',
+    price: '350.000 FCFA',
     image: '/images/photo chez Mme Niang aminata mbodj/IMG-20251105-WA0015.jpg',
     type: 'Appartement',
-    location: 'Dakar',
+    location: 'Ouest Foire',
   },
   {
     id: 3,

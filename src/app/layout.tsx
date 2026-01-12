@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./Components/Navbar/Navbar";
-import Chatbot from "./Components/Chatbot";
+import WhatsAppButton from "./Components/whatsappButton";
 
 export const metadata: Metadata = {
   title: "Cabinet IDAC SARL",
@@ -31,7 +31,7 @@ export default function RootLayout({
       <body suppressHydrationWarning>
         <Navbar />
         <main className="p-6">{children}</main>
-        <Chatbot />
+        <WhatsAppButton />
       </body>
     </html>
   );
