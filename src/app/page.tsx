@@ -438,11 +438,6 @@ export default function Home() {
         <Link href="#" target="_blank" className="inline-flex items-center mt-2 hover:underline">
         <Twitter className="mr-2" />
         </Link>
-        <div className="mt-4 text-end px-4">
-          <p className="mt-4 text-sm">
-          Conçu par <a href="https://guelewardev.vercel.app/" target="_blank" className="underline">Guelewar Dev</a>
-        </p>
-        </div>
       </footer>
 
     </main>
