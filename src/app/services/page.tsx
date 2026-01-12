@@ -52,7 +52,7 @@ export default function Services() {
           return (
             <div
               key={index}
-              className="bg-white border rounded-lg p-6 shadow-sm hover:shadow-md transition text-center"
+              className="bg-white border border-x-4 border-blue-300 rounded-lg p-6 shadow-sm hover:shadow-md transition text-center"
             >
               <div className="flex items-center justify-center h-16 w-16 mx-auto mb-4 rounded-full bg-blue-300 text-white">
                 <Icon size={28} />

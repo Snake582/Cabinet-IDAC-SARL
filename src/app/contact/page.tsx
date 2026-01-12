@@ -137,7 +137,7 @@ export default function Page() {
           {agents.map((agent, idx) => (
             <div
               key={idx}
-              className="border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition text-center bg-white"
+              className="border border-y-4 border-blue-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition text-center bg-white"
             >
               <div className="flex items-center justify-center h-20 w-20 mx-auto mb-4 rounded-full bg-blue-300 shadow-inner">
                 <User size={32} className="text-white" />
