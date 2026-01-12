@@ -35,10 +35,10 @@ const bienData = [
   },
   {
     id: '2',
-    title: 'Appartement à $',
+    title: 'Appartement à Ouest Foire',
     type: 'Appartement',
-    location: '$',
-    price: '2 FCFA',
+    location: 'Ouest Foire',
+    price: '350.000 FCFA',
     images: [
       '/images/photo chez Mme Niang aminata mbodj/IMG-20251105-WA0013.jpg',
       '/images/photo chez Mme Niang aminata mbodj/IMG-20251105-WA0012.jpg',
@@ -49,7 +49,7 @@ const bienData = [
       '/images/photo chez Mme Niang aminata mbodj/IMG-20251105-WA0010.jpg',
       '/images/photo chez Mme Niang aminata mbodj/IMG-20251105-WA0004.jpg',
     ],
-    description: 'Appartement situé à Ouest Foire. 1e étage, 4 chambres, salon, cuisine, toilette.',
+    description: "Appartement situé à Ouest Foire - Proximité mur de l'aéroport,à louer situant au 1e étage, 4 chambres, salon spacieux, cuisine fonctionnelle, toilette. Calme et Accessible. Idéal pour famille."
   },
   {
     id: '3',

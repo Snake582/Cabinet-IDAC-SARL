@@ -102,6 +102,11 @@ const Datareferences = [
     image: '/images/atlantic.jpeg',
     alt: 'Atlantic',
   },
+  {
+    id: 9,
+    image: '/images/teyliom-waterfront.jpg',
+    alt: 'Teyliom Waterfront',
+  },
 ]
 
 const biens = [
@@ -234,24 +239,63 @@ export default function Home() {
         </Link>
       </section>
 
-      {/* ================= SECTION 3 : Témoignages ================= */}
-      <section id="temoignages" className="py-24 px-4 bg-white">
-        <h2 className="text-3xl font-bold text-blue-900 text-center mb-8">
-          Témoignages
-        </h2>
+      {/* ================= SECTION : CONTACT & ACCOMPAGNEMENT ================= */}
+<section id="contact-rapide" className="py-24 px-4 bg-gray-50">
+  <div className="max-w-7xl mx-auto text-center mb-12">
+    <h2 className="text-3xl font-bold text-blue-900 mb-4">
+      Un projet immobilier ?
+    </h2>
+    <p className="text-gray-600 max-w-2xl mx-auto">
+      Que vous cherchiez un bien ou que vous souhaitiez louer, vendre ou confier
+      votre propriété, notre équipe vous accompagne à chaque étape.
+    </p>
+  </div>
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
-          <div className="bg-gray-100 rounded-lg p-6 shadow-sm">
-            “Excellent service !” – Client A
-          </div>
-          <div className="bg-gray-100 rounded-lg p-6 shadow-sm">
-            “Très professionnel et réactif.” – Client B
-          </div>
-          <div className="bg-gray-100 rounded-lg p-6 shadow-sm">
-            “Je recommande vivement.” – Client C
-          </div>
-        </div>
-      </section>
+  <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+    <div className="bg-white p-6 rounded-lg shadow-sm text-center border">
+      <h3 className="font-semibold text-lg text-blue-900 mb-2">
+        🔍 Vous cherchez un bien ?
+      </h3>
+      <p className="text-gray-600 text-sm">
+        Appartement, villa, bureau ou local commercial selon votre budget.
+      </p>
+    </div>
+
+    <div className="bg-white p-6 rounded-lg shadow-sm text-center border">
+      <h3 className="font-semibold text-lg text-blue-900 mb-2">
+        🏡 Vous êtes propriétaire ?
+      </h3>
+      <p className="text-gray-600 text-sm">
+        Confiez-nous la vente, la location ou la gestion de votre bien en toute sérénité.
+      </p>
+    </div>
+
+    <div className="bg-white p-6 rounded-lg shadow-sm text-center border">
+      <h3 className="font-semibold text-lg text-blue-900 mb-2">
+        🤝 Besoin d’accompagnement ?
+      </h3>
+      <p className="text-gray-600 text-sm">
+        Conseils, démarches administratives et suivi personnalisé.
+      </p>
+    </div>
+  </div>
+
+  {/* CTA WhatsApp */}
+  <div className="mt-12 text-center">
+    <p className="text-gray-700 mb-4">
+      📲 Discutez directement avec notre équipe sur WhatsApp
+    </p>
+
+    <a
+      href="https://wa.me/221706389681"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-full font-medium hover:bg-green-700 transition shadow"
+    >
+      💬 Contacter sur WhatsApp
+    </a>
+  </div>
+</section>
 
       {/* ================= SECTION 4 : Partenaires ================= */}
       <section className="py-24 px-4 bg-gray-50">
