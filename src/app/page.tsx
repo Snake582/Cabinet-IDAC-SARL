@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useForm, ValidationError } from '@formspree/react'
 import { useEffect } from 'react'
-import { Facebook, Instagram, Twitter } from 'lucide-react'
+import { Facebook, Instagram, Linkedin } from 'lucide-react'
 import Newsletter from './Components/Newsletter'
 
 const Datapartenaires = [
@@ -429,14 +429,14 @@ export default function Home() {
           <a href="mailto:contact@cabinetidac.sn" className='hover:underline'>✉️ contact@cabinetidac.sn</a> |
           <a href="tel:+221338239998" className='hover:underline'>📞 +221 33 823 99 98</a>
         </p>
-        <Link href="#" target="_blank" className="inline-flex items-center mt-2 hover:underline">
+        <Link href="https://www.instagram.com/cabinetidac.sarl?igsh=MW1xaHh6YnFibzQ1ag==" target="_blank" className="inline-flex items-center mt-2 hover:underline">
           <Instagram className="mr-2" />
         </Link>
-        <Link href="#" target="_blank" className="inline-flex items-center mt-2 hover:underline">
+        <Link href="https://www.facebook.com/share/1cHAuVphbY/" target="_blank" className="inline-flex items-center mt-2 hover:underline">
         <Facebook className="mr-2" />
         </Link>
-        <Link href="#" target="_blank" className="inline-flex items-center mt-2 hover:underline">
-        <Twitter className="mr-2" />
+        <Link href="https://www.linkedin.com/in/cabinet-idac-5a6515127?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" className="inline-flex items-center mt-2 hover:underline">
+        <Linkedin className="mr-2" />
         </Link>
       </footer>
 
