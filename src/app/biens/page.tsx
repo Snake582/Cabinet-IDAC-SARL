@@ -61,6 +61,15 @@ const biens = [
     type: 'Appartement',
     location: 'Dakar',
   },
+  {
+    id: 7,
+    title: 'Appartement à louer – Mariste (Duplex)',
+    description: 'Magnifique appartement type duplex à louer au Mariste, situé dans un quartier très calme.',
+    price: '300.000 FCFA TTC',
+    image: '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.07.jpeg',
+    type: 'Appartement',
+    location: 'Mariste, Dakar',
+  },
 ]
 
 export default function Biens() {

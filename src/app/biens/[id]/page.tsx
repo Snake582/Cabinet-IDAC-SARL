@@ -134,6 +134,32 @@ const bienData = [
     ],
     description: 'Direction le 3ᵉ étage pour découvrir ce magnifique appartement F3, entièrement climatisé, disponible meublé ou non meublé selon vos préférences.🛋️ Grand salon lumineux, parfaitement aménagé, avec une vue exceptionnelle sur le Monument de la Renaissance🛏️ 3 chambres avec placards, dont une suite parentale avec toilette intérieure et balcon privé🚿 Toilette extérieure🍽️ Cuisine fonctionnelle avec buanderie Un cadre de vie confortable, élégant et pratique, idéal pour se sentir chez soi dès le premier jour.'
  },
+  { 
+    id: '7',
+    title: 'Appartement à louer – Mariste (Duplex)',
+    type: 'Appartement',
+    location: 'Mariste, Dakar',
+    price: '300.000 FCFA TTC',
+    images: [
+      '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.06.jpeg',
+      '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.06 (1).jpeg',
+      '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.06 (2).jpeg',
+      '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.06 (3).jpeg',
+      '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.06 (4).jpeg',
+      '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.07.jpeg',
+      '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.07 (1).jpeg',
+      '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.07 (2).jpeg',
+      '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.07 (3).jpeg',
+      '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.07 (5).jpeg',
+      '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.07 (4).jpeg',
+      '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.07 (7).jpeg',
+      '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.08.jpeg',
+      '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.08 (1).jpeg',
+      '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.08 (2).jpeg',
+      '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.08 (3).jpeg',
+    ],
+    description: "Magnifique appartement type duplex à louer au Mariste, situé dans un quartier très calme.Il se compose de 3 chambres, chacune avec salle de bain intérieure,un grand salon spacieux et lumineux,une cuisine fonctionnelle,une toilette visiteur,ainsi qu’une terrasse privée idéale pour vos moments de détente.✨ Appartement spacieux, bien éclairé et offrant un excellent confort de vie.📍 Emplacement recherché📞 Disponible immédiatement appelez au 70 638 96 81",
+  },
 ]
 
 export default function BienPage() {
