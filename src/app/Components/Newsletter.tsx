@@ -35,12 +35,13 @@ export default function Newsletter() {
   }
 
   return (
-    <div className="bg-gray-100 p-6 rounded-xl max-w-md mx-auto text-center">
-      <h3 className="text-lg font-semibold mb-2">
+    <div className="bg-gray-100 p-6 sm:p-8 rounded-2xl max-w-xl mx-auto text-center">
+      <h3 className="text-xl font-semibold mb-2 text-blue-900">
         📩 Abonnez-vous à notre newsletter
       </h3>
-      <p className="text-sm text-gray-600 mb-4">
-        Recevez nos nouveaux biens et offres exclusives
+
+      <p className="text-sm sm:text-base text-gray-600 mb-6">
+        Recevez nos nouveaux biens, opportunités et offres exclusives directement par email.
       </p>
 
       {success ? (
@@ -48,20 +49,21 @@ export default function Newsletter() {
           ✅ Merci pour votre inscription !
         </p>
       ) : (
-        <div className="flex gap-2">
+        <div className="flex flex-col sm:flex-row gap-3">
           <input
             type="email"
             placeholder="Votre adresse email"
-            className="flex-1 border rounded px-3 py-2 text-sm"
+            className="w-full border rounded-md px-4 py-3 text-sm focus:ring-2 focus:ring-blue-300 outline-none"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
+
           <button
             onClick={subscribe}
             disabled={loading}
-            className="bg-blue-600 text-white px-4 rounded"
+            className="w-full sm:w-auto bg-blue-600 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition disabled:opacity-50"
           >
-            {loading ? '...' : 'S’abonner'}
+            {loading ? 'Inscription...' : 'S’abonner'}
           </button>
         </div>
       )}
