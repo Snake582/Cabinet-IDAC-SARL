@@ -79,7 +79,7 @@ const Datareferences = [
   },
   {
     id: 4,
-    image: '/images/Addoha.jfif',
+    image: '/images/unnamed.jpg',
     alt: 'Addoha',
   },
   {
