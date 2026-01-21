@@ -114,21 +114,21 @@ const biens = [
     id: 1,
     title: 'Appartement à la résidence IRMA',
     description: 'Bel appartement moderne et sécurisé déjà meublé, situé à la résidence IRMA, offrant un cadre de vie confortable et pratique.',
-    price: '900.000 FCFA',
+    /* price: '900.000 FCFA', */
     image: '/images/appartement à la residence IRMA/WhatsApp-Image-2022-06-09-at-11.22.26-768x1024.jpeg',
   },
   {
     id: 4,
     title: 'Résidence Bolong, Appartement F4',
     description: 'Le Cabinet IDAC SARL vous propose un magnifique F4 au 1er étage de la Résidence Bolong, derrière la station Shell.',
-    price: '1.000.000 FCFA TTC',
+    /* price: '1.000.000 FCFA TTC', */
     image: '/images/PHOTO RESIDENCE BOLONG/IMG-20250812-WA0036.jpg',
   },
   {
     id: 3,
     title: 'Terrain titré à Ngor Almadies',
     description: 'IDAC SARL propose à la vente un terrain titré de 649 m², idéalement situé à Ngor Almadies – Zone 14, dans un secteur recherché et à fort potentiel.',
-    price: '1 250 000 FCFA / m² FCFA',
+    /* price: '1 250 000 FCFA / m² FCFA', */
     image: '/images/TERRAIN SAMASSA/WhatsApp Image 2026-01-07 at 09.29.33.jpeg',
   },
 ]
@@ -223,9 +223,9 @@ export default function Home() {
         <p className="text-gray-600 text-sm mt-1">
           {bien.description}
         </p>
-        <p className="mt-3 font-bold text-amber-600">
+        {/* <p className="mt-3 font-bold text-amber-600">
           {bien.price}
-        </p>
+        </p> */}
       </div>
     </div>
   ))}
