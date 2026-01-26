@@ -5,6 +5,9 @@ import Navbar from "./Components/Navbar/Navbar";
 export const metadata: Metadata = {
   title: "Cabinet IDAC SARL",
   description: "Agence immobilière et gestion de patrimoine au Sénégal",
+  icons: {
+    icon: '/images/CABINETIDAC.png', // ou '/logo.png'
+  },
 };
 
 export default function RootLayout({
