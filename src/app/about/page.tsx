@@ -10,7 +10,7 @@ export default function About() {
           Présentation du Cabinet IDAC SARL
         </h1>
         <p className="text-gray-700 mb-4">
-          Le Cabinet IDAC est une structure spécialisée dans la gestion et la valorisation du patrimoine, ainsi que dans l&apos;accompagnement global des particuliers, entreprises et copropriétés. 
+          Le Cabinet IDAC est une structure spécialisée dans la gestion et la valorisation du immobilier, ainsi que dans l&apos;accompagnement global des particuliers, entreprises et syndic de copropriétés. 
         </p>
         <p className="text-gray-700 mb-4">
           Fondé par Monsieur IBRAHIMA DIENG, qui capitalise plus de 17 ans de pratique notariale et ayant participé à plusieurs salons de l&apos;immobilier au Sénégal comme à l&apos;étranger. 

@@ -185,8 +185,8 @@ export default function Home() {
 
     <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
       Le Cabinet IDAC est une structure spécialisée dans la gestion et la
-      valorisation du patrimoine, ainsi que dans l&apos;accompagnement global
-      des particuliers, entreprises et copropriétés.
+      valorisation du immobilier, ainsi que dans l&apos;accompagnement global
+      des particuliers, entreprises et syndic de copropriétés.
     </p>
   </div>
 </section>
