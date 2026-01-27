@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description: "Agence immobilière et gestion de patrimoine au Sénégal",
   icons: {
     icon: '/CABINETIDAC.png', // ou '/logo.png'
+    apple: '/apple-touch-icon.png',
+    shortcut: '/CABINETIDAC.png',
   },
 };
 
