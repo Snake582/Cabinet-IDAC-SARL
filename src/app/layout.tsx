@@ -6,11 +6,12 @@ export const metadata: Metadata = {
   title: "Cabinet IDAC SARL",
   description: "Agence immobilière et gestion de patrimoine au Sénégal",
   icons: {
-    icon: '/CABINETIDAC.png', // ou '/logo.png'
-    apple: '/apple-touch-icon.png',
-    shortcut: '/CABINETIDAC.png',
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
+
 
 export default function RootLayout({
   children,
