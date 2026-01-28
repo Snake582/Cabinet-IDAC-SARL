@@ -13,7 +13,7 @@ const biens = [
     price: '900.000 FCFA',
     image: '/images/appartement à la residence IRMA/WhatsApp-Image-2022-06-09-at-11.22.26-768x1024.jpeg',
     type: 'Appartement',
-    location: 'Dakar Plateau',
+    location: 'Point E',
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const biens = [
   },
   {
     id: 3,
-    title: 'Terrain titré à Ngor Almadies',
+    title: 'Terrain à Ngor Almadies',
     description: 'IDAC SARL propose à la vente un terrain titré de 649 m², idéalement situé à Ngor Almadies – Zone 14, dans un secteur recherché et à fort potentiel.',
     price: '1 250 000 FCFA / m²',
     image: '/images/TERRAIN SAMASSA/WhatsApp Image 2026-01-07 at 09.29.33.jpeg',
@@ -41,7 +41,7 @@ const biens = [
     price: '1.000.000 FCFA TTC',
     image: '/images/PHOTO RESIDENCE BOLONG/IMG-20250812-WA0036.jpg',
     type: 'Appartement',
-    location: 'Dakar',
+    location: 'Almadies, Dakar',
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ const biens = [
     price: '800.000 FCFA',
     image: '/images/PHOTO RESIDENCE DAHLIA/IMG-20250806-WA0011.jpg',
     type: 'Appartement',
-    location: 'Dakar',
+    location: 'Mermoz, Dakar',
   },
   {
     id: 7,

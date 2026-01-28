@@ -31,7 +31,7 @@ const bienData = [
       '/images/appartement%20à%20la%20residence%20IRMA/Appart6-768x1024.jpeg',
       '/images/appartement%20à%20la%20residence%20IRMA/Appart5-768x1024.jpeg',
     ],
-    description: 'Bel appartement moderne, sécurisé et bien situé.',
+    description: 'Bel appartement moderne et sécurisé déjà meublé, situé à Point E, offrant un cadre de vie confortable et pratique.',
   },
   {
     id: '2',
@@ -53,7 +53,7 @@ const bienData = [
   },
   {
     id: '3',
-    title: 'Terrain titré à Ngor Almadies',
+    title: 'Terrain à Ngor Almadies',
     type: 'Terrain',
     location: 'Ngor Almadies',
     price: '1 250 000 FCFA / m²',
@@ -64,10 +64,10 @@ const bienData = [
     description:
       'IDAC SARL propose à la vente un terrain titré de 649 m², idéalement situé à Ngor Almadies – Zone 14, dans un secteur recherché et à fort potentiel. Le terrain fait actuellement l’objet d’une démolition en cours, réalisée conformément à une autorisation administrative dûment validée, ce qui permet un démarrage immédiat d’un projet immobilier. Il se prête parfaitement à un développement résidentiel ou commercial.',
   },
-  {    id: '4',
+  {
     title: 'Résidence Bolong, Appartement F4',
     type: 'Appartement',
-    location: 'Dakar',
+    location: 'Almadies, Dakar',
     price: '1.000.000 FCFA TTC',
     images: [
       '/images/PHOTO RESIDENCE BOLONG/IMG-20250812-WA0036.jpg',
@@ -86,7 +86,7 @@ const bienData = [
       '/images/PHOTO RESIDENCE BOLONG/IMG-20250812-WA0050.jpg',
       '/images/PHOTO RESIDENCE BOLONG/IMG-20250812-WA0037.jpg',
     ],
-    description: 'Le Cabinet IDAC SARL vous propose un magnifique F4 au 1er étage de la Résidence Bolong, derrière la station Shell.\n\n💎 Dans la résidence :\n• Ascenseur\n• Parking sécurisé\n• Gardiennage 24h/24\n• Piscine pour se détendre\n\n🏡 Composition de l’appartement :\n• Salon lumineux avec balcon\n• Cuisine moderne équipée (buanderie + garde-manger)\n• Chambre avec placard et toilette privative\n• 2 autres chambres avec placards (dont 1 avec balcon)\n• Patio idéal pour un espace vert\n• 2 toilettes extérieures',
+    description: 'Le Cabinet IDAC SARL vous propose un magnifique F4 au 1er étage de la Résidence Bolong, Almadies derrière la station Shell.\n\n💎 Dans la résidence :\n• Ascenseur\n• Parking sécurisé\n• Gardiennage 24h/24\n• Piscine pour se détendre\n\n🏡 Composition de l’appartement :\n• Salon lumineux avec balcon\n• Cuisine moderne équipée (buanderie + garde-manger)\n• Chambre avec placard et toilette privative\n• 2 autres chambres avec placards (dont 1 avec balcon)\n• Patio idéal pour un espace vert\n• 2 toilettes extérieures',
   },
   {
     id: '5',
@@ -117,7 +117,7 @@ const bienData = [
     id: '6',
     title: 'Résidence RESIDENCE DAHLIA',
     type: 'Appartement',
-    location: 'Dakar',
+    location: 'Mermoz, Dakar',
     price: '800.000 FCFA',
     images: [
       '/images/PHOTO RESIDENCE DAHLIA/IMG-20250806-WA0015.jpg',

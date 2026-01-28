@@ -113,20 +113,20 @@ const biens = [
   {
     id: 1,
     title: 'Appartement à la résidence IRMA',
-    description: 'Bel appartement moderne et sécurisé déjà meublé, situé à la résidence IRMA, offrant un cadre de vie confortable et pratique.',
+    description: 'Bel appartement moderne et sécurisé déjà meublé, situé à Point E, offrant un cadre de vie confortable et pratique.',
     /* price: '900.000 FCFA', */
     image: '/images/appartement à la residence IRMA/WhatsApp-Image-2022-06-09-at-11.22.26-768x1024.jpeg',
   },
   {
     id: 4,
     title: 'Résidence Bolong, Appartement F4',
-    description: 'Le Cabinet IDAC SARL vous propose un magnifique F4 au 1er étage de la Résidence Bolong, derrière la station Shell.',
+    description: 'Le Cabinet IDAC SARL vous propose un magnifique F4 au 1er étage de la Résidence Bolong.',
     /* price: '1.000.000 FCFA TTC', */
     image: '/images/PHOTO RESIDENCE BOLONG/IMG-20250812-WA0036.jpg',
   },
   {
     id: 3,
-    title: 'Terrain titré à Ngor Almadies',
+    title: 'Terrain à Ngor Almadies',
     description: 'IDAC SARL propose à la vente un terrain titré de 649 m², idéalement situé à Ngor Almadies – Zone 14, dans un secteur recherché et à fort potentiel.',
     /* price: '1 250 000 FCFA / m² FCFA', */
     image: '/images/TERRAIN SAMASSA/WhatsApp Image 2026-01-07 at 09.29.33.jpeg',
@@ -180,13 +180,14 @@ export default function Home() {
   {/* Contenu */}
   <div className="relative z-10 text-center px-6 max-w-3xl">
     <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-      Bienvenue chez <span className="text-blue-400">Cabinet IDAC SARL</span>
+      Bienvenue chez <span className="text-blue-400">Cabinet IDAC IMMOBILIER SARL</span>
     </h1>
 
     <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-      Le Cabinet IDAC est une structure spécialisée dans la gestion et la
-      valorisation du immobilier, ainsi que dans l&apos;accompagnement global
-      des particuliers, entreprises et syndic de copropriétés.
+      Le Cabinet IDAC place le conseil au cœur de sa mission en accompagnant ses clients dans l&apos;étude et la réalisation de leurs investissements immobiliers,
+      la gestion locative, le syndic de copropriété, la gestion de patrimoine,
+      toutes transactions immobilières,
+      ainsi que les travaux de réfection et de maintenance de bâtiment.
     </p>
   </div>
 </section>
@@ -246,8 +247,7 @@ export default function Home() {
       Un projet immobilier ?
     </h2>
     <p className="text-gray-600 max-w-2xl mx-auto">
-      Que vous cherchiez un bien ou que vous souhaitiez louer, vendre ou confier
-      votre propriété, notre équipe vous accompagne à chaque étape.
+      Que vous cherchiez un bien ou que vous souhaitiez louer, vendre.Notre équipe vous accompagne à chaque étape.
     </p>
   </div>
 
@@ -266,7 +266,7 @@ export default function Home() {
         🏡 Vous êtes propriétaire ?
       </h3>
       <p className="text-gray-600 text-sm">
-        Confiez-nous la vente, la location ou la gestion de votre bien en toute sérénité.
+        Confiez-nous la vente, la location ou la gestion de votre bien, pour une gestion transparente et fiscale de votre bien.
       </p>
     </div>
 
@@ -275,7 +275,7 @@ export default function Home() {
         🤝 Besoin d’accompagnement ?
       </h3>
       <p className="text-gray-600 text-sm">
-        Conseils, démarches administratives et suivi personnalisé.
+        Conseils, démarches administratives et suivi personnalisé pour une étude d&apos;un projet d&apos;investissement immobilière - bussiness plan.
       </p>
     </div>
   </div>
@@ -296,60 +296,34 @@ export default function Home() {
     </a>
   </div>
 </section>
+<section className="py-24 px-4 bg-gray-50">
+  <h2 className="text-3xl font-bold text-blue-900 text-center mb-12">
+    Nos Partenaires & Références
+  </h2>
 
-      {/* ================= SECTION 4 : Partenaires ================= */}
-      <section className="py-24 px-4 bg-gray-50">
-        <h2 className="text-3xl font-bold text-blue-900 text-center mb-8">
-          Nos Partenaires
-        </h2>
-
-        <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-8">
-          {Datapartenaires.map((partenaire) => (
-            <div
-              key={partenaire.id}
-              className="bg-white rounded-lg shadow-md p-6 w-48 h-24 flex items-center justify-center overflow-hidden"
-            >
-              {partenaire.image ? (
-                <Image
-                  src={partenaire.image}
-                  alt={partenaire.alt}
-                  width={150}
-                  height={60}
-                  className="object-cover"
-                />
-              ) : (
-                <span className="text-gray-400 text-sm">
-                  Logo à venir
-                </span>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ================= SECTION 5 : Références ================= */}
-      <section className="py-24 px-4 bg-gray-50">
-        <h2 className="text-3xl font-bold text-blue-900 text-center mb-8">
-          Nos Références
-        </h2>
-
-        <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-8">
-          {Datareferences.map((reference) => (
-            <div
-              key={reference.id}
-              className="bg-white rounded-lg shadow-md p-6 w-48 h-24 flex items-center justify-center overflow-hidden"
-            >
-              <Image
-                src={reference.image}
-                alt={reference.alt}
-                width={150}
-                height={60}
-                className="object-cover"
-              />
-            </div>
-          ))}
-        </div>
-      </section>
+  <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+    {[...Datapartenaires, ...Datareferences].map((item) => (
+      <div
+        key={item.id}
+        className="bg-white rounded-xl shadow-sm p-6 h-28 flex items-center justify-center transition hover:shadow-md"
+      >
+        {item.image ? (
+          <Image
+            src={item.image}
+            alt={item.alt}
+            width={160}
+            height={80}
+            className="object-contain max-h-16"
+          />
+        ) : (
+          <span className="text-gray-400 text-sm">
+            Logo à venir
+          </span>
+        )}
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* ================= SECTION 6 : Contact ================= */}
       <section id="contact" className="py-24 px-4 bg-white">
