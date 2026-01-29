@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-// Exemple de données fictives pour les biens
+// ================= DONNÉES =================
 const biens = [
   {
     id: 1,
@@ -17,17 +17,19 @@ const biens = [
   },
   {
     id: 2,
-    title: 'Appartement à Ouest Foire',
-    description: 'Appartement situé à Ouest Foire. 1e étage, 4 chambres, salon, cuisine, toilette.',
-    price: '350.000 FCFA',
+    title: 'Appartement - Ouest Foire',
+    description:
+      'Appartement situé à Ouest Foire. 1e étage, 4 chambres, salon, cuisine, toilette.',
+    price: 'Déjà loué',
     image: '/images/photo chez Mme Niang aminata mbodj/IMG-20251105-WA0015.jpg',
     type: 'Appartement',
     location: 'Ouest Foire',
   },
   {
     id: 3,
-    title: 'Terrain à Ngor Almadies',
-    description: 'IDAC SARL propose à la vente un terrain titré de 649 m², idéalement situé à Ngor Almadies – Zone 14, dans un secteur recherché et à fort potentiel.',
+    title: 'Terrain titre foncier',
+    description:
+      'Terrain titre foncier de 649 m² idéalement situé à Ngor Almadies – Zone 14.',
     price: '1 250 000 FCFA / m²',
     image: '/images/TERRAIN SAMASSA/WhatsApp Image 2026-01-07 at 09.29.33.jpeg',
     type: 'Terrain',
@@ -37,7 +39,7 @@ const biens = [
   {
     id: 4,
     title: 'Résidence Bolong, Appartement F4',
-    description: 'Le Cabinet IDAC SARL vous propose un magnifique F4 au 1er étage de la Résidence Bolong, derrière la station Shell.\n\n💎 Dans la résidence :\n• Ascenseur\n• Parking sécurisé\n• Gardiennage 24h/24\n• Piscine pour se détendre\n\n🏡 Composition de l’appartement :\n• Salon lumineux avec balcon\n• Cuisine moderne équipée (buanderie + garde-manger)\n• Chambre avec placard et toilette privative\n• 2 autres chambres avec placards (dont 1 avec balcon)\n• Patio idéal pour un espace vert\n• 2 toilettes extérieures',
+    description: 'Magnifique appartement F4 aux Almadies.',
     price: '1.000.000 FCFA TTC',
     image: '/images/PHOTO RESIDENCE BOLONG/IMG-20250812-WA0036.jpg',
     type: 'Appartement',
@@ -46,7 +48,7 @@ const biens = [
   {
     id: 5,
     title: 'VILLA SALY',
-    description: 'Le Cabinet IDAC SARL vous propose une magnifique villa à Saly. Elle se compose de :\n\n🏡 Une spacieuse pièce de vie avec salon et salle à manger\n🍽️ Une cuisine moderne entièrement équipée\n🌳 Un grand jardin arboré pour profiter des beaux jours\n🚗 Un parking privé pour plusieurs véhicules\n\nCette villa est idéale pour une résidence principale ou une maison de vacances, offrant confort et tranquillité dans un cadre agréable.',
+    description: 'Magnifique villa avec jardin à Saly.',
     price: 'Déjà loué',
     image: '/images/VILLA SALY/WhatsApp Image 2026-01-07 at 09.49.19.jpeg',
     type: 'Villa',
@@ -54,8 +56,9 @@ const biens = [
   },
   {
     id: 6,
-    title: 'PHOTO RESIDENCE DAHLIA',
-    description: 'Direction le 3ᵉ étage pour découvrir ce magnifique appartement F3, entièrement climatisé, disponible meublé ou non meublé selon vos préférences.',
+    title: 'RESIDENCE DAHLIA',
+    description:
+      'Appartement F3 climatisé, disponible meublé ou non.',
     price: '800.000 FCFA',
     image: '/images/PHOTO RESIDENCE DAHLIA/IMG-20250806-WA0011.jpg',
     type: 'Appartement',
@@ -64,14 +67,38 @@ const biens = [
   {
     id: 7,
     title: 'Appartement à louer – Mariste (Duplex)',
-    description: 'Magnifique appartement type duplex à louer au Mariste, situé dans un quartier très calme.',
+    description:
+      'Magnifique appartement duplex dans un quartier calme.',
     price: '300.000 FCFA TTC',
     image: '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.07.jpeg',
     type: 'Appartement',
     location: 'Mariste, Dakar',
   },
+  {
+    id: 8,
+    title: 'Spa totalement équipée',
+    description:
+      'Spa professionnel dans un environnement sécurisé.',
+    price: '750.000 FCFA',
+    image:
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.46 (2).jpeg',
+    type: 'Local commercial',
+    location: 'Ngor Almadies',
+  },
+  {
+    id: 9,
+    title: 'Salle de sport totalement équipée',
+    description:
+      'Salle de sport entièrement équipée.',
+    price: '500.000 FCFA',
+    image:
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.40.jpeg',
+    type: 'Local commercial',
+    location: 'Ngor Almadies',
+  },
 ]
 
+// ================= COMPOSANT =================
 export default function Biens() {
   const [filter, setFilter] = useState('Tous')
 
@@ -83,13 +110,14 @@ export default function Biens() {
   return (
     <main className="bg-gray-50 min-h-screen py-16">
       <div className="max-w-7xl mx-auto px-4">
+
         <h1 className="text-3xl font-bold text-blue-900 mb-6">
           Nos biens
         </h1>
 
         {/* FILTRE */}
         <div className="flex flex-wrap gap-3 mb-10">
-          {['Tous', 'Appartement', 'Villa', 'Terrain'].map((type) => (
+          {['Tous', 'Appartement', 'Villa', 'Terrain', 'Local commercial'].map((type) => (
             <button
               key={type}
               onClick={() => setFilter(type)}
@@ -111,28 +139,37 @@ export default function Biens() {
               key={bien.id}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
             >
-              {/* Image */}
+              {/* IMAGE SÉCURISÉE */}
               <div className="relative h-48">
-                <Image
-                  src={bien.image}
-                  alt={bien.title}
-                  fill
-                  className="object-cover"
-                />
+                {bien.image ? (
+                  <Image
+                    src={bien.image}
+                    alt={bien.title}
+                    fill
+                    className="object-cover"
+                  />
+                ) : (
+                  <div className="flex items-center justify-center h-full bg-gray-200 text-gray-500 text-sm">
+                    Image non disponible
+                  </div>
+                )}
               </div>
 
-              {/* Contenu */}
+              {/* CONTENU */}
               <div className="p-4">
                 <h2 className="font-semibold text-lg text-gray-800">
                   {bien.title}
                 </h2>
 
                 <p className="text-gray-600 text-sm">
-                  {bien.type} • {bien.surface} • {bien.location}
+                  {bien.type}
+                  {bien.surface && ` • ${bien.surface}`}
+                  {' • '}
+                  {bien.location}
                 </p>
 
                 <p className="text-blue-900 font-bold mt-2">
-                  {bien.price.toLocaleString()} 
+                  {bien.price}
                 </p>
 
                 <Link
@@ -155,4 +192,3 @@ export default function Biens() {
     </main>
   )
 }
-

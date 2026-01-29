@@ -113,21 +113,21 @@ const biens = [
   {
     id: 1,
     title: 'Appartement à la résidence IRMA',
-    description: 'Bel appartement moderne et sécurisé déjà meublé, situé à Point E, offrant un cadre de vie confortable et pratique.',
+    description: 'Bel appartement moderne et sécurisé déjà meublé, situé au Point E, offrant un cadre de vie confortable et pratique.',
     /* price: '900.000 FCFA', */
     image: '/images/appartement à la residence IRMA/WhatsApp-Image-2022-06-09-at-11.22.26-768x1024.jpeg',
   },
   {
     id: 4,
     title: 'Résidence Bolong, Appartement F4',
-    description: 'Le Cabinet IDAC SARL vous propose un magnifique F4 au 1er étage de la Résidence Bolong.',
+    description: 'Le Cabinet IDAC SARL Immobilier vous propose un magnifique F4 au 1er étage de la Résidence Bolong situé aux almadies.',
     /* price: '1.000.000 FCFA TTC', */
     image: '/images/PHOTO RESIDENCE BOLONG/IMG-20250812-WA0036.jpg',
   },
   {
     id: 3,
     title: 'Terrain à Ngor Almadies',
-    description: 'IDAC SARL propose à la vente un terrain titré de 649 m², idéalement situé à Ngor Almadies – Zone 14, dans un secteur recherché et à fort potentiel.',
+    description: 'IDAC SARL Immobilier propose un terrain titre foncier de 649 m², idéalement situé à Ngor Almadies – Zone 14, dans un secteur recherché et à fort potentiel.',
     /* price: '1 250 000 FCFA / m² FCFA', */
     image: '/images/TERRAIN SAMASSA/WhatsApp Image 2026-01-07 at 09.29.33.jpeg',
   },
@@ -184,7 +184,7 @@ export default function Home() {
     </h1>
 
     <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-      Le Cabinet IDAC place le conseil au cœur de sa mission en accompagnant ses clients dans l&apos;étude et la réalisation de leurs investissements immobiliers,
+      Le <span className="font-semibold">CABINET IDAC SARL IMMOBILIER</span> place le conseil au cœur de sa mission en accompagnant ses clients dans l&apos;étude et la réalisation de leurs investissements immobiliers,
       la gestion locative, le syndic de copropriété, la gestion de patrimoine,
       toutes transactions immobilières,
       ainsi que les travaux de réfection et de maintenance de bâtiment.
@@ -296,33 +296,64 @@ export default function Home() {
     </a>
   </div>
 </section>
-<section className="py-24 px-4 bg-gray-50">
-  <h2 className="text-3xl font-bold text-blue-900 text-center mb-12">
-    Nos Partenaires & Références
-  </h2>
+<section className="py-24 px-4 bg-gray-50 space-y-20">
 
-  <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
-    {[...Datapartenaires, ...Datareferences].map((item) => (
-      <div
-        key={item.id}
-        className="bg-white rounded-xl shadow-sm p-6 h-28 flex items-center justify-center transition hover:shadow-md"
-      >
-        {item.image ? (
-          <Image
-            src={item.image}
-            alt={item.alt}
-            width={160}
-            height={80}
-            className="object-contain max-h-16"
-          />
-        ) : (
-          <span className="text-gray-400 text-sm">
-            Logo à venir
-          </span>
-        )}
-      </div>
-    ))}
+  {/* ================= PARTENAIRES ================= */}
+  <div>
+    <h2 className="text-3xl font-bold text-blue-900 text-center mb-12">
+      Nos Partenaires
+    </h2>
+
+    <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+      {Datapartenaires.map((item) => (
+        <div
+          key={item.id}
+          className="bg-white rounded-xl shadow-sm p-6 h-28 flex items-center justify-center transition hover:shadow-md"
+        >
+          {item.image ? (
+            <Image
+              src={item.image}
+              alt={item.alt}
+              width={160}
+              height={80}
+              className="object-contain max-h-16"
+            />
+          ) : (
+            <span className="text-gray-400 text-sm">Logo à venir</span>
+          )}
+        </div>
+      ))}
+    </div>
   </div>
+
+  {/* ================= RÉFÉRENCES ================= */}
+  <div>
+    <h2 className="text-3xl font-bold text-blue-900 text-center mb-12">
+      Nos Références
+    </h2>
+
+    <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+      {Datareferences.map((item) => (
+        <div
+          key={item.id}
+          className="bg-white rounded-xl shadow-sm p-6 h-28 flex items-center justify-center transition hover:shadow-md"
+        >
+          {item.image ? (
+            <Image
+              src={item.image}
+              alt={item.alt}
+              width={160}
+              height={80}
+              className="object-contain max-h-16"
+            />
+          ) : (
+            <span className="text-gray-400 text-sm">Logo à venir</span>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+
 </section>
 
       {/* ================= SECTION 6 : Contact ================= */}

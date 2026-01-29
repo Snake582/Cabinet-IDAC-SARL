@@ -33,10 +33,10 @@ export default function About() {
       <section className="bg-white shadow-md rounded-lg p-6">
         <h2 className="text-xl font-bold mb-4 text-blue-900">NOS SERVICES</h2>
         <p className="text-gray-700">
-          Le Cabinet IDAC est spécialisé dans la gestion locative du patrimoine, l’administration de syndic
+          <span className="font-bold text-blue-900">Le Cabinet IDAC</span> est spécialisé dans la gestion locative du patrimoine, l’administration de syndic
           de copropriété et la gestion de patrimoine. Face à l’abondance de la législation en matière immobilière,
           les rapports bailleur-locataire deviennent de plus en plus complexes.
-          C’est pourquoi le Cabinet IDAC met à votre disposition son expertise dans la recherche de locataires,
+          C’est pourquoi <span className="font-bold text-blue-900">le Cabinet IDAC</span> met à votre disposition son expertise dans la recherche de locataires,
           l’administration juridique et comptable des biens loués :
           rédaction des baux, états des lieux, déclarations fiscales, perception et recouvrement des loyers,
           gestion des dépenses, des travaux et des entretiens nécessaires.
@@ -72,7 +72,7 @@ export default function About() {
         <h2 className="text-xl font-bold mb-4 text-blue-900">SYNDIC DE COPROPRIÉTÉ</h2>
 
         <p className="text-gray-700 mb-2">
-          Concernant le syndic de copropriété des immeubles, le Cabinet IDAC a pour mission :
+          Concernant le syndic de copropriété des immeubles, <span className="font-bold text-blue-900">le Cabinet IDAC</span> a pour mission :
         </p>
 
         <ul className="list-disc list-inside text-gray-700 space-y-1">
@@ -103,6 +103,30 @@ export default function About() {
           <li>Le suivi de la vente;</li>
           <li>La valorisation du bien sur le marché.</li>
         </ul>
+      </section>
+
+              {/* ================= GESTION DE PATRIMOINE ================= */}
+      <section className="bg-white shadow-md rounded-lg p-6">
+        <h2 className="text-xl font-bold mb-4 text-blue-900">GESTION DE PATRIMOINE</h2>
+
+        <p className="text-gray-700 mb-2">
+          Pourquoi choisir <span className="font-bold text-blue-900">CABINET IDAC</span> en tant que conseiller en gestion de patrimoine ?
+          Pour l&apos;accompagnement sur mesure propoosé par de véritables compétences en placements financiers, mais également en investissement immobilier,
+          mais également en investissement immobilier, nos professionnels sélectionnés avec soin pour leurs compétences avisées dans le secteur, sauront vous guider pas à pas
+          dans chacune des étapes de la vie de votre patrimoine.
+        </p>
+        <p className="text-gray-700">
+          Notre objectif est de vous aider à developper, tout au long de votre vie, un patrimoine
+          pérenne. La gestion de patrimoine répond à des enjeux spécifiques: maitriser sa fiscalité,
+          optimiser ses revenus, protéger ses proches, transmettre son patrimoine, assurer sa retraite, accéder à des placements durables.
+          Quels que soient vos projets, <span className="font-bold text-blue-900">le Cabinet IDAC</span> vous accompagne dans vos projets patrimoniaux et vous réserve le meilleur conseil
+          en fonction des tendances du marché.          
+        </p>
+        <p className="text-gray-700">
+          Acquisition immobilière, transmition de patrimoine, placements dans les produits financiers les plus adaptés à votre horizon de risque
+          ou encore préparation à la retraite, <span className="font-bold text-blue-900">le Cabinet IDAC</span> vous aide à faire les bons choix
+          selon vos propres objectifs. Il saura également vous donner les clés pour optimiser votre fiscalité et choisir les placements adaptés.
+        </p>
       </section>
 
       {/* ================= INFORMATIONS ================= */}

@@ -31,14 +31,14 @@ const bienData = [
       '/images/appartement%20à%20la%20residence%20IRMA/Appart6-768x1024.jpeg',
       '/images/appartement%20à%20la%20residence%20IRMA/Appart5-768x1024.jpeg',
     ],
-    description: 'Bel appartement moderne et sécurisé déjà meublé, situé à Point E, offrant un cadre de vie confortable et pratique.',
+    description: 'Bel appartement moderne et sécurisé déjà meublé, situé au Point E, offrant un cadre de vie confortable et pratique.',
   },
   {
     id: '2',
     title: 'Appartement à Ouest Foire',
     type: 'Appartement',
     location: 'Ouest Foire',
-    price: '350.000 FCFA',
+    price: 'Déjà loué',
     images: [
       '/images/photo chez Mme Niang aminata mbodj/IMG-20251105-WA0013.jpg',
       '/images/photo chez Mme Niang aminata mbodj/IMG-20251105-WA0012.jpg',
@@ -53,7 +53,7 @@ const bienData = [
   },
   {
     id: '3',
-    title: 'Terrain à Ngor Almadies',
+    title: 'Terrain titre foncier',
     type: 'Terrain',
     location: 'Ngor Almadies',
     price: '1 250 000 FCFA / m²',
@@ -62,9 +62,10 @@ const bienData = [
       '/images/TERRAIN%20SAMASSA/WhatsApp%20Image%202026-01-07%20at%2009.29.33.jpeg',
     ],
     description:
-      'IDAC SARL propose à la vente un terrain titré de 649 m², idéalement situé à Ngor Almadies – Zone 14, dans un secteur recherché et à fort potentiel. Le terrain fait actuellement l’objet d’une démolition en cours, réalisée conformément à une autorisation administrative dûment validée, ce qui permet un démarrage immédiat d’un projet immobilier. Il se prête parfaitement à un développement résidentiel ou commercial.',
+      'IDAC SARL IMMOBILIER propose un terrain titre foncier de 649 m², idéalement situé à Ngor Almadies – Zone 14, dans un secteur recherché et à fort potentiel. Pour un immeuble de raport avec un bon rendement locatif.',
   },
   {
+    id: '4',
     title: 'Résidence Bolong, Appartement F4',
     type: 'Appartement',
     location: 'Almadies, Dakar',
@@ -86,7 +87,7 @@ const bienData = [
       '/images/PHOTO RESIDENCE BOLONG/IMG-20250812-WA0050.jpg',
       '/images/PHOTO RESIDENCE BOLONG/IMG-20250812-WA0037.jpg',
     ],
-    description: 'Le Cabinet IDAC SARL vous propose un magnifique F4 au 1er étage de la Résidence Bolong, Almadies derrière la station Shell.\n\n💎 Dans la résidence :\n• Ascenseur\n• Parking sécurisé\n• Gardiennage 24h/24\n• Piscine pour se détendre\n\n🏡 Composition de l’appartement :\n• Salon lumineux avec balcon\n• Cuisine moderne équipée (buanderie + garde-manger)\n• Chambre avec placard et toilette privative\n• 2 autres chambres avec placards (dont 1 avec balcon)\n• Patio idéal pour un espace vert\n• 2 toilettes extérieures',
+    description: 'Le Cabinet IDAC SARL IMMOBILIER vous propose un magnifique F4 au 1er étage de la Résidence Bolong, Almadies derrière la station Shell.\n\n💎 Dans la résidence :\n• Ascenseur\n• Parking sécurisé\n• Gardiennage 24h/24\n• Piscine pour se détendre\n\n🏡 Composition de l’appartement :\n• Salon lumineux avec balcon\n• Cuisine moderne équipée (buanderie + garde-manger)\n• Chambre avec placard et toilette privative\n• 2 autres chambres avec placards (dont 1 avec balcon)\n• Patio idéal pour un espace vert\n• 2 toilettes extérieures',
   },
   {
     id: '5',
@@ -132,7 +133,7 @@ const bienData = [
       '/images/PHOTO RESIDENCE DAHLIA/WhatsApp Image 2026-01-07 at 09.29.36 (2).jpeg',
       '/images/PHOTO RESIDENCE DAHLIA/WhatsApp Image 2026-01-07 at 09.29.36 (4).jpeg',
     ],
-    description: 'Direction le 3ᵉ étage pour découvrir ce magnifique appartement F3, entièrement climatisé, disponible meublé ou non meublé selon vos préférences.🛋️ Grand salon lumineux, parfaitement aménagé, avec une vue exceptionnelle sur le Monument de la Renaissance🛏️ 3 chambres avec placards, dont une suite parentale avec toilette intérieure et balcon privé🚿 Toilette extérieure🍽️ Cuisine fonctionnelle avec buanderie Un cadre de vie confortable, élégant et pratique, idéal pour se sentir chez soi dès le premier jour.'
+    description: 'Situé à la 3ᵉ étage ce magnifique appartement F3, entièrement climatisé, disponible meublé ou non meublé selon vos préférences.🛋️ Séjour, parfaitement aménagé, avec une vue exceptionnelle sur le Monument de la Renaissance🛏️ 3 chambres avec placards, dont une suite parentale avec toilette intérieure et balcon privé🚿 Toilette extérieure🍽️ Cuisine fonctionnelle avec buanderie Un cadre de vie confortable, élégant et pratique, idéal pour se sentir chez soi dès le premier jour.'
  },
   { 
     id: '7',
@@ -159,6 +160,50 @@ const bienData = [
       '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.08 (3).jpeg',
     ],
     description: "Magnifique appartement type duplex à louer au Mariste, situé dans un quartier très calme.Il se compose de 3 chambres, chacune avec salle de bain intérieure,un grand salon spacieux et lumineux,une cuisine fonctionnelle,une toilette visiteur,ainsi qu’une terrasse privée idéale pour vos moments de détente.✨ Appartement spacieux, bien éclairé et offrant un excellent confort de vie.📍 Emplacement recherché📞 Disponible immédiatement appelez au 70 638 96 81",
+  },
+  { 
+    id: '8',
+    title: 'Spa totalement équipée',
+    type: 'Local commercial',
+    location: 'Ngor Almadies',
+    price: '750.000 FCFA',
+    images: [
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.46 (2).jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.41 (1).jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.41 (2).jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.41.jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.45 (2).jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.46 (3).jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.47.jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.45 (4).jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.46.jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.44 (1).jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.45.jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.47 (2).jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.46 (1).jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.46 (4).jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.45 (1).jpeg',
+    ],
+    description: "Nous vous proposons à la location, à Ngor Almadies, un Spa professionnel équipée, situés dans un environnement sécurisé et adapté aux activités de bien-être. Installations complètes et opèrationnelles, Piscine intégrée, Gardiennage 24/24, Cadre sécurisé et accessible, convient à une exploitation immédiate, conditions financières(TTC).",
+  },
+  { 
+    id: '9',
+    title: 'Salle de sport totalement équipée',
+    type: 'Local commercial',
+    location: 'Ngor Almadies',
+    price: '500.000 FCFA',
+    images: [
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.40.jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.42 (4).jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.47 (1).jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.47 (2).jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.42 (2).jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.46 (4).jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.42.jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.42 (3).jpeg',
+      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.46 (5).jpeg',
+    ],
+    description: "Nous vous proposons à la location, à Ngor Almadies, une salle de sport entièrement équipée, situé dans un environnement sécurisé et adapté aux activités de fitness. Installations complètes, piscine intégrée, gardiennage 24h/24, cadre sécurisé et accessible. Exploitation immédiate – conditions financières TTC.",
   },
 ]
 
