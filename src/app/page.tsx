@@ -184,10 +184,9 @@ export default function Home() {
     </h1>
 
     <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-      Le <span className="font-semibold">CABINET IDAC SARL IMMOBILIER</span> place le conseil au cœur de sa mission en accompagnant ses clients dans l&apos;étude et la réalisation de leurs investissements immobiliers,
-      la gestion locative, le syndic de copropriété, la gestion de patrimoine,
-      toutes transactions immobilières,
-      ainsi que les travaux de réfection et de maintenance de bâtiment.
+      Le <span className="font-semibold">CABINET IDAC SARL IMMOBILIER</span> place le conseil au cœur de sa mission en accompagnant ses clients dans l’étude et la réalisation de leurs investissements immobiliers, la gestion locative, le syndic de copropriété, la gestion de patrimoine,
+       toutes transactions immobilières, ainsi que les travaux de réfection et de maintenance de bâtiment.
+       Le Cabinet intervient également dans les domaines de l’architecture et assure des missions de maîtrise d’ouvrage déléguée, en coordonnant, pilotant et sécurisant l’ensemble des projets de construction, de rénovation et d’aménagement, depuis la conception jusqu’à la livraison finale.
     </p>
   </div>
 </section>

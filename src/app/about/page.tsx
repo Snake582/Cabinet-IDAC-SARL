@@ -34,12 +34,13 @@ export default function About() {
         <h2 className="text-xl font-bold mb-4 text-blue-900">NOS SERVICES</h2>
         <p className="text-gray-700">
           <span className="font-bold text-blue-900">Le Cabinet IDAC</span> est spécialisé dans la gestion locative du patrimoine, l’administration de syndic
-          de copropriété et la gestion de patrimoine. Face à l’abondance de la législation en matière immobilière,
+          de copropriété et la gestion de patrimoine, ainsi que dans les domaines de l’architecture et de la maîtrise d’ouvrage déléguée.
+           Face à l’abondance de la législation en matière immobilière,
           les rapports bailleur-locataire deviennent de plus en plus complexes.
           C’est pourquoi <span className="font-bold text-blue-900">le Cabinet IDAC</span> met à votre disposition son expertise dans la recherche de locataires,
           l’administration juridique et comptable des biens loués :
           rédaction des baux, états des lieux, déclarations fiscales, perception et recouvrement des loyers,
-          gestion des dépenses, des travaux et des entretiens nécessaires.
+          gestion des dépenses, des travaux et des entretiens nécessaires, tout en assurant le pilotage et la coordination des projets de construction, de rénovation et d’aménagement.
         </p>
       </section>
 
