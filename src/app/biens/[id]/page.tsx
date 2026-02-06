@@ -140,7 +140,7 @@ const bienData = [
     title: 'Appartement à louer – Mariste (Duplex)',
     type: 'Appartement',
     location: 'Mariste, Dakar',
-    price: '300.000 FCFA TTC',
+    price: 'Déjà loué',
     images: [
       '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.06.jpeg',
       '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.06 (1).jpeg',
@@ -204,6 +204,28 @@ const bienData = [
       '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.46 (5).jpeg',
     ],
     description: "Nous vous proposons à la location, à Ngor Almadies, une salle de sport entièrement équipée, situé dans un environnement sécurisé et adapté aux activités de fitness. Installations complètes, piscine intégrée, gardiennage 24h/24, cadre sécurisé et accessible. Exploitation immédiate – conditions financières TTC.",
+  },
+  { 
+    id: '10',
+    title: 'Appartement à louer – Ngor Almadies',
+    type: 'Appartement',
+    location: 'Ngor Almadies',
+    price: '650.000 FCFA',
+    images: [
+      '/images/Appartalmadies/WhatsApp Image 2026-02-06 at 09.21.18.jpeg',
+      '/images/Appartalmadies/WhatsApp Image 2026-02-06 at 09.21.19 (1).jpeg',
+      '/images/Appartalmadies/WhatsApp Image 2026-02-06 at 09.21.19 (2).jpeg',
+      '/images/Appartalmadies/WhatsApp Image 2026-02-06 at 09.21.19 (4).jpeg',
+      '/images/Appartalmadies/WhatsApp Image 2026-02-06 at 09.21.19 (3).jpeg',
+      '/images/Appartalmadies/WhatsApp Image 2026-02-06 at 09.21.19 (5).jpeg',
+      '/images/Appartalmadies/WhatsApp Image 2026-02-06 at 09.21.19 (6).jpeg',
+      '/images/Appartalmadies/WhatsApp Image 2026-02-06 at 09.21.20.jpeg',
+      '/images/Appartalmadies/WhatsApp Image 2026-02-06 at 09.21.20 (1).jpeg',
+      '/images/Appartalmadies/WhatsApp Image 2026-02-06 at 09.21.20 (5).jpeg',
+      '/images/Appartalmadies/WhatsApp Image 2026-02-06 at 09.21.20 (2).jpeg',
+      '/images/Appartalmadies/WhatsApp Image 2026-02-06 at 09.21.20 (4).jpeg',
+    ],
+    description: "Nous vous proposons à la location, à Ngor Almadies, un appartement moderne et bien situé. Immeuble avec piscine et sécurité 24h/24.",
   },
 ]
 

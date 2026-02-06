@@ -96,6 +96,17 @@ const biens = [
     type: 'Local commercial',
     location: 'Ngor Almadies',
   },
+  {
+    id: 10,
+    title: 'Appartement à louer – Ngor Almadies',
+    description:
+      'Appartement moderne et bien situé à Ngor Almadies. Immeuble avec piscine et sécurité 24h/24.',
+    price: '650.000 FCFA',
+    image:
+      '/images/Appartalmadies/WhatsApp Image 2026-02-06 at 09.21.19 (4).jpeg',
+    type: 'Appartement',
+    location: 'Ngor Almadies',
+  },
 ]
 
 // ================= COMPOSANT =================
