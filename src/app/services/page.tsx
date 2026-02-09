@@ -44,16 +44,16 @@ const services = [
     icon: DollarSign,
   },
   {
-    title: 'Ressources humaines',
-    description:
-      'Le Cabinet IDAC propose un accompagnement structuré en ressources humaines lié aux activités immobilières et patrimoniales. Nous assistons nos clients dans l’organisation, la gestion et le suivi du personnel intervenant sur leurs biens et projets (gestionnaires, agents, gardiens, prestataires), dans le respect des obligations légales et opérationnelles.',
-    icon: Clipboard,
-  },
-  {
     title: 'Gestion de patrimoine',
     description:
       'Nous conseillons les investisseurs dans le développement et l’optimisation de leur patrimoine immobilier grâce à des solutions sur mesure, sécurisées et orientées résultats.',
     icon: Briefcase,
+  },
+  {
+    title: 'Ressources humaines',
+    description:
+      'Le Cabinet IDAC propose un accompagnement structuré en ressources humaines. Etablissement des contrats de travail, affiliation aux institutions sociales IPRES caisse de sécurité social, le suivi des déclarations VRS. Nous assistons nos clients dans l’organisation, la gestion et le suivi du personnel intervenant sur leurs biens et projets (gestionnaires, agents, gardiens, prestataires), dans le respect des obligations légales et opérationnelles.',
+    icon: Clipboard,
   },
 ]
 

@@ -76,7 +76,7 @@ const biens = [
   },
   {
     id: 8,
-    title: 'Spa totalement équipée',
+    title: 'Spa totalement équipé',
     description:
       'Spa professionnel dans un environnement sécurisé.',
     price: '750.000 FCFA',

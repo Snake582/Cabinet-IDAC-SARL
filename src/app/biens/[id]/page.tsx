@@ -163,7 +163,7 @@ const bienData = [
   },
   { 
     id: '8',
-    title: 'Spa totalement équipée',
+    title: 'Spa totalement équipé',
     type: 'Local commercial',
     location: 'Ngor Almadies',
     price: '750.000 FCFA',
