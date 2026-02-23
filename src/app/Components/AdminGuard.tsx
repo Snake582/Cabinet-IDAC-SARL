@@ -1,10 +1,14 @@
 'use client'
 
+import { ReactNode, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { useEffect } from 'react'
 import { useAuth } from '../context/AuthContext'
 
-export default function AdminGuard({ children }) {
+type AdminGuardProps = {
+  children: ReactNode
+}
+
+export default function AdminGuard({ children }: AdminGuardProps) {
   const { user } = useAuth()
   const router = useRouter()
 
@@ -12,9 +16,9 @@ export default function AdminGuard({ children }) {
     if (!user || user.role !== 'admin') {
       router.push('/admin/login')
     }
-  }, [user])
+  }, [user, router])
 
-  if (!user) return null
+  if (!user || user.role !== 'admin') return null
 
   return <>{children}</>
 }
