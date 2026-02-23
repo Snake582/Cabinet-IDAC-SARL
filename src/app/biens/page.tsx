@@ -1,205 +1,184 @@
 'use client'
 
-import React, { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
+import { Heart } from 'lucide-react'
 
-// ================= DONNÉES =================
-const biens = [
-  {
-    id: 1,
-    title: 'Appartement à la résidence IRMA',
-    description: 'Bel appartement moderne et sécurisé',
-    price: '900.000 FCFA',
-    image: '/images/appartement à la residence IRMA/WhatsApp-Image-2022-06-09-at-11.22.26-768x1024.jpeg',
-    type: 'Appartement',
-    location: 'Point E',
-  },
-  {
-    id: 2,
-    title: 'Appartement - Ouest Foire',
-    description:
-      'Appartement situé à Ouest Foire. 1e étage, 4 chambres, salon, cuisine, toilette.',
-    price: 'Déjà loué',
-    image: '/images/photo chez Mme Niang aminata mbodj/IMG-20251105-WA0015.jpg',
-    type: 'Appartement',
-    location: 'Ouest Foire',
-  },
-  {
-    id: 3,
-    title: 'Terrain titre foncier',
-    description:
-      'Terrain titre foncier de 649 m² idéalement situé à Ngor Almadies – Zone 14.',
-    price: '1 250 000 FCFA / m²',
-    image: '/images/TERRAIN SAMASSA/WhatsApp Image 2026-01-07 at 09.29.33.jpeg',
-    type: 'Terrain',
-    surface: '649 m²',
-    location: 'Ngor Almadies',
-  },
-  {
-    id: 4,
-    title: 'Résidence Bolong, Appartement F4',
-    description: 'Magnifique appartement F4 aux Almadies.',
-    price: '1.000.000 FCFA TTC',
-    image: '/images/PHOTO RESIDENCE BOLONG/IMG-20250812-WA0036.jpg',
-    type: 'Appartement',
-    location: 'Almadies, Dakar',
-  },
-  {
-    id: 5,
-    title: 'VILLA SALY',
-    description: 'Magnifique villa avec jardin à Saly.',
-    price: 'Déjà loué',
-    image: '/images/VILLA SALY/WhatsApp Image 2026-01-07 at 09.49.19.jpeg',
-    type: 'Villa',
-    location: 'Mbour, Sénégal',
-  },
-  {
-    id: 6,
-    title: 'RESIDENCE DAHLIA',
-    description:
-      'Appartement F3 climatisé, disponible meublé ou non.',
-    price: '800.000 FCFA',
-    image: '/images/PHOTO RESIDENCE DAHLIA/IMG-20250806-WA0011.jpg',
-    type: 'Appartement',
-    location: 'Mermoz, Dakar',
-  },
-  {
-    id: 7,
-    title: 'Appartement à louer – Mariste (Duplex)',
-    description:
-      'Magnifique appartement duplex dans un quartier calme.',
-    price: 'Déjà loué',
-    image: '/images/Appart à Mariste/WhatsApp Image 2026-01-14 at 11.22.07.jpeg',
-    type: 'Appartement',
-    location: 'Mariste, Dakar',
-  },
-  {
-    id: 8,
-    title: 'Spa totalement équipé',
-    description:
-      'Spa professionnel dans un environnement sécurisé.',
-    price: '750.000 FCFA',
-    image:
-      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.46 (2).jpeg',
-    type: 'Local commercial',
-    location: 'Ngor Almadies',
-  },
-  {
-    id: 9,
-    title: 'Salle de sport totalement équipée',
-    description:
-      'Salle de sport entièrement équipée.',
-    price: '500.000 FCFA',
-    image:
-      '/images/Appartement ngor-almadies/WhatsApp Image 2026-01-29 at 11.03.40.jpeg',
-    type: 'Local commercial',
-    location: 'Ngor Almadies',
-  },
-  {
-    id: 10,
-    title: 'Appartement à louer – Ngor Almadies',
-    description:
-      'Appartement moderne et bien situé à Ngor Almadies. Immeuble avec piscine et sécurité 24h/24.',
-    price: '650.000 FCFA',
-    image:
-      '/images/Appartalmadies/WhatsApp Image 2026-02-06 at 09.21.19 (4).jpeg',
-    type: 'Appartement',
-    location: 'Ngor Almadies',
-  },
-]
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
-// ================= COMPOSANT =================
-export default function Biens() {
-  const [filter, setFilter] = useState('Tous')
+export default function BiensPage() {
+  const [biens, setBiens] = useState<any[]>([])
+  const [filteredBiens, setFilteredBiens] = useState<any[]>([])
+  const [maxPrice, setMaxPrice] = useState('')
+  const [type, setType] = useState('')
+  const [likedBiens, setLikedBiens] = useState<number[]>([])
+  const router = useRouter()
 
-  const filteredBiens =
-    filter === 'Tous'
-      ? biens
-      : biens.filter((b) => b.type === filter)
+  useEffect(() => {
+    fetch(`${API_URL}/biens`)
+      .then(res => res.json())
+      .then(data => {
+        setBiens(data)
+        setFilteredBiens(data)
+      })
+  }, [])
+
+  useEffect(() => {
+    let result = biens
+
+    if (maxPrice)
+      result = result.filter(b => Number(b.price) <= Number(maxPrice))
+
+    if (type)
+      result = result.filter(b => b.type === type)
+
+    setFilteredBiens(result)
+  }, [maxPrice, type, biens])
+  useEffect(() => {
+  const storedLikes = localStorage.getItem('likedBiens')
+  if (storedLikes) {
+    setLikedBiens(JSON.parse(storedLikes))
+  }
+}, [])
+
+  const getStatusStyle = (status: string) => {
+    switch (status) {
+      case 'disponible':
+        return 'bg-emerald-500'
+      case 'vendu':
+        return 'bg-blue-600'
+      case 'loué':
+        return 'bg-amber-500'
+      default:
+        return 'bg-red-600'
+    }
+  }
+  const toggleLike = (id: number) => {
+  let updatedLikes
+
+  if (likedBiens.includes(id)) {
+    updatedLikes = likedBiens.filter(bienId => bienId !== id)
+  } else {
+    updatedLikes = [...likedBiens, id]
+  }
+
+  setLikedBiens(updatedLikes)
+  localStorage.setItem('likedBiens', JSON.stringify(updatedLikes))
+}
 
   return (
-    <main className="bg-gray-50 min-h-screen py-16">
-      <div className="max-w-7xl mx-auto px-4">
+    <div className="bg-gray-50 min-h-screen">
 
-        <h1 className="text-3xl font-bold text-blue-900 mb-6">
-          Nos biens
+      <div className="bg-gradient-to-r from-blue-600 to-blue-400 text-white py-16 text-center px-6">
+        <h1 className="text-3xl md:text-5xl font-bold mb-4">
+          Trouvez Votre Propriété Idéale
         </h1>
+        <p className="opacity-80">Sélection exclusive de biens immobiliers</p>
+      </div>
 
-        {/* FILTRE */}
-        <div className="flex flex-wrap gap-3 mb-10">
-          {['Tous', 'Appartement', 'Villa', 'Terrain', 'Local commercial'].map((type) => (
-            <button
-              key={type}
-              onClick={() => setFilter(type)}
-              className={`px-4 py-2 rounded-md font-medium transition ${
-                filter === type
-                  ? 'bg-blue-900 text-white'
-                  : 'bg-white text-gray-800 border hover:bg-blue-100'
-              }`}
-            >
-              {type}
-            </button>
-          ))}
-        </div>
+      <div className="bg-white shadow-md rounded-2xl p-6 mx-6 md:mx-20 -mt-10 relative z-10">
+        <div className="grid md:grid-cols-3 gap-4">
+          <input
+            type="number"
+            placeholder="Prix maximum (FCFA)"
+            value={maxPrice}
+            onChange={e => setMaxPrice(e.target.value)}
+            className="border rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-black"
+          />
 
-        {/* LISTE DES BIENS */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredBiens.map((bien) => (
-            <div
-              key={bien.id}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
-            >
-              {/* IMAGE SÉCURISÉE */}
-              <div className="relative h-48">
-                {bien.image ? (
-                  <Image
-                    src={bien.image}
-                    alt={bien.title}
-                    fill
-                    className="object-cover"
-                  />
-                ) : (
-                  <div className="flex items-center justify-center h-full bg-gray-200 text-gray-500 text-sm">
-                    Image non disponible
-                  </div>
-                )}
-              </div>
+          <select
+            value={type}
+            onChange={e => setType(e.target.value)}
+            className="border rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-black"
+          >
+            <option value="">Tous les types</option>
+            <option value="Appartement">Appartement</option>
+            <option value="Terrain">Terrain</option>
+            <option value="Villa">Villa</option>
+            <option value="Local commercial">Local commercial</option>
+          </select>
 
-              {/* CONTENU */}
-              <div className="p-4">
-                <h2 className="font-semibold text-lg text-gray-800">
-                  {bien.title}
-                </h2>
-
-                <p className="text-gray-600 text-sm">
-                  {bien.type}
-                  {bien.surface && ` • ${bien.surface}`}
-                  {' • '}
-                  {bien.location}
-                </p>
-
-                <p className="text-blue-900 font-bold mt-2">
-                  {bien.price}
-                </p>
-
-                <Link
-                  href={`/biens/${bien.id}`}
-                  className="mt-4 inline-block bg-blue-900 text-white px-4 py-2 rounded-md hover:bg-blue-800 transition text-sm"
-                >
-                  Voir détails
-                </Link>
-              </div>
-            </div>
-          ))}
-
-          {filteredBiens.length === 0 && (
-            <p className="col-span-full text-center text-gray-600">
-              Aucun bien ne correspond à ce filtre.
-            </p>
-          )}
+          <button
+            onClick={() => {
+              setMaxPrice('')
+              setType('')
+            }}
+            className="bg-red-400 text-white rounded-xl p-3 hover:bg-red-600 transition"
+          >
+            Réinitialiser
+          </button>
         </div>
       </div>
-    </main>
+
+      <div className="p-6 md:p-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {filteredBiens.map(bien => {
+
+          const imagesValides =
+            bien.images?.filter((img: any) => img.url && img.url.trim() !== '') || []
+
+          const imageSrc =
+            imagesValides.length > 0
+              ? `http://localhost:3000/uploads/${imagesValides[0].url}`
+              : '/placeholder.png'
+
+          return (
+            <div
+              key={bien.id}
+              className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500"
+            >
+              <div className="relative overflow-hidden">
+                <img
+                  src={imageSrc}
+                  className="w-full h-60 sm:h-72 object-cover group-hover:scale-110 transition duration-700"
+                />
+
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
+
+                <span
+                  className={`absolute top-4 left-4 px-4 py-1 text-xs font-semibold text-white rounded-full shadow backdrop-blur-md ${getStatusStyle(bien.status)}`}
+                >
+                  {bien.status}
+                </span>
+
+                <button
+  onClick={() => toggleLike(bien.id)}
+  className="absolute top-4 right-4 bg-white/70 backdrop-blur-md p-2 rounded-full shadow hover:scale-110 transition"
+>
+  <Heart
+    size={18}
+    className={
+      likedBiens.includes(bien.id)
+        ? 'text-red-500 fill-red-500'
+        : 'text-black'
+    }
+  />
+</button>
+              </div>
+
+              <div className="p-5">
+                <h2 className="text-lg font-semibold">{bien.title}</h2>
+                <p className="text-gray-500 text-sm">{bien.location}</p>
+                <p className="text-xl font-bold text-gray-900 mt-3">
+                  {bien.price} FCFA
+                </p>
+
+                <button
+                  onClick={() => router.push(`/biens/${bien.id}`)}
+                  className="mt-5 w-full bg-blue-500 text-white py-2 rounded-xl hover:bg-blue-800 transition"
+                >
+                  Découvrir
+                </button>
+              </div>
+            </div>
+          )
+        })}
+      </div>
+
+      {filteredBiens.length === 0 && (
+        <div className="text-center pb-20 text-gray-500">
+          Aucun bien ne correspond aux critères.
+        </div>
+      )}
+    </div>
   )
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./Components/Navbar/Navbar";
+import { AuthProvider } from "./context/AuthContext";
 
 export const metadata: Metadata = {
   title: "Cabinet IDAC SARL",
@@ -12,7 +13,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: {
@@ -21,22 +21,23 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
-        {/* Remix Icon */}
         <link
           href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
           rel="stylesheet"
         />
 
-        {/* Font Awesome */}
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
           rel="stylesheet"
         />
       </head>
+
       <body suppressHydrationWarning>
-        <Navbar />
-        <main className="p-6">{children}</main>
-        {/* <WhatsAppButton /> */}
+        {/* 👇 On enveloppe TOUT dans AuthProvider */}
+        <AuthProvider>
+          <Navbar />
+          <main className="p-6">{children}</main>
+        </AuthProvider>
       </body>
     </html>
   );

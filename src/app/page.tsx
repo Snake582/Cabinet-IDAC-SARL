@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useForm, ValidationError } from '@formspree/react'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Facebook, Instagram, Linkedin } from 'lucide-react'
 import Newsletter from './Components/Newsletter'
 
@@ -136,19 +136,88 @@ const biens = [
 export default function Home() {
   const [state, handleSubmit] = useForm('mgovdjjy')
     const router = useRouter()
-  
-    // 🔁 Redirection après succès
-    useEffect(() => {
-      if (state.succeeded) {
-        const timer = setTimeout(() => {
-          router.push('/')
-        }, 3000)
-        return () => clearTimeout(timer)
-      }
-    }, [state.succeeded, router])
-  
-    // ✅ Message après envoi
+     const [loading, setLoading] = useState(true)
+  const [showWelcome, setShowWelcome] = useState(false)
+  const [showSite, setShowSite] = useState(false)
+   
+  // ===============================
+  // SPLASH SCREEN
+  // ===============================
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setLoading(false)
+    setShowWelcome(true)
+  }, 2500)
+
+  return () => clearTimeout(timer)
+}, [])
+
+  // ===============================
+  // MESSAGE SUCCESS FORM
+  // ===============================
+  useEffect(() => {
     if (state.succeeded) {
+      const timer = setTimeout(() => {
+        router.push('/')
+      }, 3000)
+      return () => clearTimeout(timer)
+    }
+  }, [state.succeeded, router])
+
+  // ===============================
+  // LOADER AVEC IMAGE BOUNCE
+  // ===============================
+  if (loading) {
+    return (
+      <div className="h-screen flex flex-col items-center justify-center bg-white">
+        <Image
+          src="/images/CABINETIDAC.png"   // 👉 Mets ici ton logo si différent
+          alt="Logo IDAC"
+          width={120}
+          height={120}
+          className="animate-bounce"
+        />
+        <p className="mt-6 text-blue-900 font-semibold text-lg">
+          Chargement...
+        </p>
+      </div>
+    )
+  }
+      // ===============================
+  // BOX BIENVENUE
+  // ===============================
+  if (showWelcome) {
+    return (
+      <div className="h-screen flex items-center justify-center bg-gray-100 px-6">
+        <div className="bg-white p-10 rounded-3xl shadow-2xl text-center max-w-md w-full">
+          <h1 className="text-3xl font-bold mb-4 text-blue-900">
+            Bienvenue 👋
+          </h1>
+
+          <h2 className="text-2xl font-semibold mb-2 text-blue-800">
+            Yeksilak jamm ci Cabinet IDAC SARL IMMOBILIER🏠 
+          </h2>
+
+          <p className="text-gray-600 mb-6">
+            Cabinet IDAC IMMOBILIER SARL vous accompagne dans tous vos projets immobiliers au Sénégal.
+          </p>
+
+          <button
+            onClick={() => {
+              setShowWelcome(false)
+              setShowSite(true)
+            }}
+            className="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-800 transition w-full"
+          >
+            Continuer
+          </button>
+        </div>
+      </div>
+    )
+  }
+  
+  // ✅ Message après envoi
+  if (state.succeeded) {
       return (
         <div className="flex items-center justify-center min-h-screen bg-blue-200">
           <div className="bg-white p-8 rounded-lg shadow-md text-center">
@@ -162,7 +231,7 @@ export default function Home() {
         </div>
       )
     }
-
+if (showSite) {
   return (
     <main className="bg-gray-50 text-gray-900">
 
@@ -461,4 +530,5 @@ export default function Home() {
 
     </main>
   )
+}
 }
