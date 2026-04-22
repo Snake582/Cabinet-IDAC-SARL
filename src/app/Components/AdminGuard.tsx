@@ -9,16 +9,18 @@ type AdminGuardProps = {
 }
 
 export default function AdminGuard({ children }: AdminGuardProps) {
-  const { user } = useAuth()
+  const { user, loading } = useAuth()
   const router = useRouter()
 
   useEffect(() => {
-    if (!user || user.role !== 'admin') {
+    if (!loading && (!user || user.role !== 'admin')) {
       router.push('/admin/login')
     }
-  }, [user, router])
+  }, [user, loading, router])
 
-  if (!user || user.role !== 'admin') return null
+  if (loading || !user || user.role !== 'admin') {
+    return <p>Chargement...</p> // ou un spinner
+  }
 
   return <>{children}</>
 }
